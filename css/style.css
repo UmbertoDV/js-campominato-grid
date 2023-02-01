@@ -18,6 +18,7 @@ img {
 	font-weight: bold;
 	cursor: pointer;
 }
+
 .blocco-piccolo.active {
 	background-color: red;
 }
