@@ -23,8 +23,14 @@ generaGriglia(grigliaEl);
  * @param {*} grigliaEl Elemento griglia cioè il blocco grande.
  *
  */
-function generaGriglia(grigliaEl) {
-	const bloccoPiccoloElemento = document.createElement("div");
-	bloccoPiccoloElemento.classList.add("blocco-piccolo");
-	grigliaEl.append(bloccoPiccoloElemento);
+function generaGriglia(griglia) {
+	for (let i = 0; i < 100; i++) {
+		const bloccoPiccoloEl = document.createElement("div");
+		bloccoPiccoloEl.classList.add("blocco-piccolo");
+		griglia.append(bloccoPiccoloEl);
+
+		bloccoPiccoloEl.addEventListener("click", function () {
+			this.classList.toggle("active");
+		});
+	}
 }
